@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Stephen Elmer</Authors>
+    <Company>StarThrower Software</Company>
+    <Copyright>Copyright © 2026 Stephen Elmer</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <!-- These projects are NOT published to NuGet -->
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+</Project>

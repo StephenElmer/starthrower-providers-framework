@@ -1,0 +1,22 @@
+﻿@model StarThrower.Providers.Framework.TestWebApp.Models.HomeViewModel
+
+@section mainContent {
+    
+    <h2>Home</h2>
+
+    <div>
+        @if (this.ViewData.Model.IsLoggedIn)
+        {
+            @Html.ActionLink("logout", "LogOff", "Account")
+        }
+        else
+        {
+            @Html.ActionLink("log in", String.Empty, "Admin")
+        }
+    </div>
+
+    <div>
+        Home @Html.ActionLink("Admin", String.Empty, "Admin")
+    </div>
+}
+

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\StarThrower.public.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+
+  <Target Name="SignAndDeploy" AfterTargets="Build"
+          Condition="Exists('D:\Keys\StarThrower\StarThrower.snk')">
+    <Exec Command='"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\sn.exe" -R "$(TargetPath)" "D:\Keys\StarThrower\StarThrower.snk"' />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SolutionDir)..\Deploy\"
+          ContinueOnError="true" />
+  </Target>
+
+</Project>

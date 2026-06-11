@@ -1,0 +1,32 @@
+﻿@model StarThrower.Providers.Framework.TestWebApp.Models.AccountLogOnViewModel
+
+
+@section mainContent {
+    <div id="logonContainer">
+        <span id="logon">Log On</span>
+        <span id="logonMsg">Please enter your username and password.</span>
+        @using (Html.BeginForm())
+        {
+            <section id="logonFields">
+                <div id="userName">
+                    @Html.LabelFor(m => m.UserName)
+                    @Html.TextBoxFor(m => m.UserName)
+                    @Html.ValidationMessageFor(m => m.UserName)
+                </div>
+                <div id="password">
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+                <div id="rememberMe">
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe)
+                </div>
+    
+                <span id="logonFail">@Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")</span>
+    
+                <span id="logonBtn"><input type="submit" value="Log On" /></span>
+            </section>
+        }
+    </div>
+}
