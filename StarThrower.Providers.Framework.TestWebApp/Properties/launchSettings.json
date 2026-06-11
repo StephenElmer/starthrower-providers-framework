@@ -1,12 +1,16 @@
 {
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:64347",
+      "sslPort": 0
+    }
+  },
   "profiles": {
-    "StarThrower.Providers.TestWebApp": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:64347"
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true
     }
   }
 }

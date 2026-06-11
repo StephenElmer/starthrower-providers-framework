@@ -1,4 +1,4 @@
-# StarThrower.Providers.TestWebApp
+# StarThrower.Providers.Framework.TestWebApp
 
 An ASP.NET MVC 4 sample web application demonstrating the
 [`StarThrower.EfProviders`](../StarThrower.EfProviders/README.md) and

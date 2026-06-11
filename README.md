@@ -34,6 +34,14 @@ suffix to:
 All projects target **.NET Framework 4.8** and are not packaged for NuGet
 (`IsPackable=false`).
 
+> **Note:** `StarThrower.Providers.Framework.TestWebApp` builds successfully but cannot
+> be run/debugged (F5) from Visual Studio 2026. It uses the SDK-style
+> `Microsoft.NET.Sdk.Web` project format targeting net48 with classic
+> `System.Web`/MVC 4, and VS's IIS Express debugging integration expects the legacy
+> non-SDK web project format. Fixing this would require restructuring the csproj — out
+> of scope for this frozen repo. Build-clean is the bar; the project is kept for
+> reference only.
+
 ## Migration Path
 
 A modern rebuild targeting .NET 10, ASP.NET Core Identity, and EF Core is planned for a

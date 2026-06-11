@@ -68,7 +68,11 @@ broader StarThrower.Utilities Phase 2 or a dedicated `starthrower-providers` rep
 ### Other Projects
 
 - `StarThrower.Providers.Framework.TestWebApp` — ASP.NET MVC 4 web app for provider
-  testing. net48, not migrated, kept for reference only.
+  testing. net48, not migrated, kept for reference only. **Builds successfully but
+  cannot be run/debugged (F5) in Visual Studio 2026** — the SDK-style
+  `Microsoft.NET.Sdk.Web` + net48 + classic `System.Web` combination isn't supported by
+  VS's IIS Express debugging integration, which expects the legacy non-SDK web project
+  format. Not worth fixing for a frozen repo.
 
 ---
 
